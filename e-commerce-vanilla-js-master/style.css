@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --black: #1c2a39;
+  --gray: #5c6a79;
+  --purple: #4c3db2;
+}
+
+.navbar{
+  height: 120px;
+  width: 80%;
+  margin-left: 10%;
+}
+
+/*kitaplar hediyerler kısmı ve person search kısmının yukarıdan aşağı değil soldan sağa olmasını istediğimiz için düzenleme*/
+.menu,.menu_icons{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  color: var(--gray);
+  cursor:pointer;/*bunlar menü tıklama eventi olduğundan mouse üzerine geldiğinde tıklama eventi olduğu gözükmesi için*/
+}/*soldan sağa dizim sağladık üst kısımda*/
+
+/*active gördüğümüz için renk veriyoruz color ile yetersiz kalan renk için font weight ile iyice vurgu yaptırdık*/
+.menu .active{
+  color: var(--black);
+  font-weight: bold;
+}
+
+/*yukarıda yaptığımızda soldan sağa yaptık ama aralarında boşluk yoktu boşluk eklemek için*/
+.menu li,.menu_icons li{
+  margin: 0 10px;/*0=üstten alttan 10px=soldan sağdan demek*/
+}
+
+.menu_icons li{
+  color:var(--black)/*iconların rengini belirginleştirmek için*/
+}
+
+.basket__icon{
+  position: relative;/*altta yaptığımız sepet ürünü için eğer bunu yapmazsak konumunu ayarlayamayız.relative yaparak kapsayıcı dışına çıkmasını engelleriz*/
+}
+.basket__count{/*sepetteki ürün işaretinin ayarları*/
+  position: absolute;/*ile konumunu nerde istiyorsak ona göre right bottom belirliyoruz bununla konumunu ayarlayabiliyoruz*/
+  right:-0.7rem;
+  bottom: 0;
+
+  width: 20px;
+  height: 20px;
+  background-color: var(--black);
+  border-radius: 50%;/*yuvarlak bir obje olması için*/
+
+  /*sepetteki daire içindeki sayı ayarları*/
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.slider{/*girişteki animasyon hareketini sayfaya eşitlemek için*/
+  width: 80%;
+  height: 600px;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+.slider img{/*animasyonun içindeki resimler için*/
+  height: 600px;
+}
+
+.store{
+  width: 80%;
+  margin-left: 10%;
+  /*background-color: green;/*hemen slider resmin altına renk verdi biz bu rengin biraz daha altta olmasını istiyoruz bu yüzden:*/
+  /*margin-top: ; kullanrak slider altına boşluk yapabiliriz ya da html de store yanına mt-5 kütüphanesini yazarak*/
+  height: 100px;
+}
+
+.book_card{
+  height: 400px;/*yükseklik*/
+}
+
+.fos{
+  font-family: "Open Sans",sans-serif;
+}
+
+.gray{
+  color:var(--gray);
+}
+
+.black{
+  color: var(--black);
+}
+
+.fw-bold{
+  font-weight: bold;
+}
+
+.book_star-rate .bi-star,.bi-star-fill{
+  color: #eeedf5;
+  font-size: 1.2rem;
+  margin-right: 5px;
+}
+
+.book_star-rate .bi-star-fill.active{
+  color: #f2c94c;
+}
+
+.book_description{
+  display:-webkit-box;
+  -webkit-line-clamp: 4;/*açıklamalar kısmında satır sayısının 4 olmasını istiyoruz*/
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.old_price{
+  text-decoration: line-through;/*yazı üzerinin çizili olması*/
+  color:#bdbdbd;
+}
+
+.btn_purple{
+  cursor: pointer;/*fare ile tıklanabilir old.*/
+  border: 2px solid var(--purple);
+  color: var(--purple);
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: transparent;
+  transition: all 250ms ease-in-out;
+  
+}
+
+.btn_purple:hover{
+  background-color: var(--purple);
+  color: white;
+}
+
+
+
+
